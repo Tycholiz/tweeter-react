@@ -37,12 +37,12 @@
   width: 10%;
 }
 .tweetWrapper__likeButton {
-  height: 0.3em;
-  width: 0.3em;
-  justify-self: flex-end;
+  font-size: 12px;
+  flex: 1;
 }
 .tweetContainer {
   margin-left: 2em;
+  margin-right: 2em;
 }
 body {
   margin: 0;
