@@ -1,3 +1,49 @@
+.header {
+  background-color: #f00;
+  display: flex;
+  flex-direction: row;
+}
+.profileBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profilePic {
+  width: 50px;
+  height: 50px;
+}
+.headerText {
+  margin: 0 auto;
+}
+.main {
+  background-color: #fff;
+}
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d3d3;
+}
+.tweetWrapper {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #000;
+  background-color: #800080;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.tweetWrapper__media {
+  background-color: #ff0;
+  width: 10%;
+}
+.tweetWrapper__likeButton {
+  height: 0.3em;
+  width: 0.3em;
+  justify-self: flex-end;
+}
+.tweetContainer {
+  margin-left: 2em;
+}
 body {
   margin: 0;
   padding: 0;
@@ -14,13 +60,10 @@ code {
 }
 .header {
   grid-area: hd;
-  background-color: #808080;
 }
 .aside {
   grid-area: as;
-  background-color: #f00;
 }
-.tweetContainer {
+.main {
   grid-area: mn;
-  background-color: #ff0;
 }

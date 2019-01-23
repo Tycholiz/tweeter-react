@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 
 import Header from './components/Header'
 import Aside from './components/Aside'
@@ -11,9 +10,9 @@ class App extends Component {
       <div className="container">
         <Header />
         <Aside />
-        <TweetContainer />
-        {/* <div className="aside">ASIDE</div>
-        <div className="main">MAIN</div> */}
+        <div className="main">
+          <TweetContainer className="tweetContainer" />
+        </div>
       </div>
     );
   }

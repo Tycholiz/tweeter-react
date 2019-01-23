@@ -1,4 +1,8 @@
 @import './header.styl'
+@import './main.styl'
+@import './aside.styl'
+@import './tweet.styl'
+@import './tweetContainer.styl'
 
 body
   margin 0
@@ -7,26 +11,20 @@ body
   -webkit-font-smoothing antialiased;
   -moz-osx-font-smoothing grayscale;
 
-
 code
   font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 
-
 .container
 	display grid
-	// grid-template-columns 1fr
 	grid-template-areas "hd hd hd hd hd hd hd hd hd hd"\
 											"as as as mn mn mn mn mn mn mn"\
 											"as as as mn mn mn mn mn mn mn"
 
 .header
 	grid-area hd
-	background-color grey
 
 .aside
 	grid-area as
-	background-color red
 
-.tweetContainer
+.main
 	grid-area mn
-	background-color yellow
