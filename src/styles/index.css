@@ -20,7 +20,7 @@ code {
   grid-area: as;
   background-color: #f00;
 }
-.main {
+.tweetContainer {
   grid-area: mn;
   background-color: #ff0;
 }
