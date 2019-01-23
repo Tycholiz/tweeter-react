@@ -1,0 +1,20 @@
+@import './header.styl'
+
+.container
+	display grid
+	// grid-template-columns 1fr
+	grid-template-areas "hd hd hd hd hd hd hd hd hd hd"\
+											"as as as mn mn mn mn mn mn mn"\
+											"as as as mn mn mn mn mn mn mn"
+
+.header
+	grid-area hd
+	background-color grey
+
+.aside
+	grid-area as
+	background-color red
+
+.main
+	grid-area mn
+	background-color yellow
