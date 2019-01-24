@@ -33,6 +33,7 @@ class TweetContainer extends Component {
 				<Tweet
 					key={tweet._id}
 					text={tweet.text}
+					liked={tweet.liked}
 				/>
 			)
 		})
@@ -43,19 +44,6 @@ class TweetContainer extends Component {
 		return (
 			<div className="tweetContainer">
 				{this.renderTweets()}
-				{/* <Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" />
-				<Tweet className="tweetWrapper" /> */}
 			</div>
 		);
 	}

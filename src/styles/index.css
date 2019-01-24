@@ -39,6 +39,7 @@
 .tweetWrapper__likeButton {
   font-size: 12px;
   flex: 1;
+  cursor: pointer;
 }
 .tweetContainer {
   margin-left: 2em;

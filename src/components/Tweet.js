@@ -16,7 +16,7 @@ class Tweet extends Component {
 				<div className="tweetWrapper__likeButton">
 					<FontAwesomeIcon
 						icon="heart"
-						color="lightgrey"
+						color= {this.props.liked ? "red" : "lightgrey"}
 						size="lg"
 					/>
 				</div>
