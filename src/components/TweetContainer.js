@@ -19,15 +19,10 @@ class TweetContainer extends Component {
 				})
 				return this.state.tweets
 			})
-			.then(tweets => {
-				tweets.forEach(function(tweet) {
-					return (
-						<Tweet
-							text={tweet.text}
-						/>
-					)
-				})
+			.catch(err => {
+				console.log('Unable to retrieve tweets from api:', err)
 			})
+
 	}
 
 	renderTweets = () => {
@@ -36,8 +31,8 @@ class TweetContainer extends Component {
 		return tweets.map((tweet) => {
 			return (
 				<Tweet
-					text={tweet.text}
 					key={tweet._id}
+					text={tweet.text}
 				/>
 			)
 		})

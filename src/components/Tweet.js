@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 class Tweet extends Component {
 	render() {
 		return (
@@ -12,7 +14,11 @@ class Tweet extends Component {
 					<p>{this.props.text}</p>
 				</div>
 				<div className="tweetWrapper__likeButton">
-					<p>	&#9829;</p>
+					<FontAwesomeIcon
+						icon="heart"
+						color="lightgrey"
+						size="lg"
+					/>
 				</div>
 			</div>
 		);
