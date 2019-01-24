@@ -1,20 +1,66 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
 import Tweet from './Tweet'
 
 class TweetContainer extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			tweets: []
+		}
+	}
+
+	componentDidMount = () => {
+		axios.get("http://localhost:5000/api/tweets")
+			.then(res => {
+				this.setState({
+					tweets: res.data
+				})
+				return this.state.tweets
+			})
+			.then(tweets => {
+				tweets.forEach(function(tweet) {
+					return (
+						<Tweet
+							text={tweet.text}
+						/>
+					)
+				})
+			})
+	}
+
+	renderTweets = () => {
+		const { tweets } = this.state;
+
+		return tweets.map((tweet) => {
+			return (
+				<Tweet
+					text={tweet.text}
+					key={tweet._id}
+				/>
+			)
+		})
+
+	}
+
 	render() {
 		return (
 			<div className="tweetContainer">
+				{this.renderTweets()}
+				{/* <Tweet className="tweetWrapper" />
 				<Tweet className="tweetWrapper" />
-				<Tweet />
-				<Tweet />
-				<Tweet />
-				<Tweet />
-				<Tweet />
-				<Tweet />
-				<Tweet />
-				<Tweet />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" />
+				<Tweet className="tweetWrapper" /> */}
 			</div>
 		);
 	}

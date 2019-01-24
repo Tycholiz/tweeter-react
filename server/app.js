@@ -3,14 +3,16 @@ const express = require("express")
 const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const routes = require('./routes')
 
-const Tweet = require('./models/Tweet')
+// const Tweet = require('./models/Tweet')
 
 const router = express.Router()
 const url = process.env.MONGODB_URI || "mongodb://localhost:27017/tweeter"
 
 /** set up middleware */
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
