@@ -31,6 +31,7 @@ class TweetContainer extends Component {
 		return tweets.map((tweet) => {
 			return (
 				<Tweet
+					id={tweet._id}
 					key={tweet._id}
 					text={tweet.text}
 					liked={tweet.liked}
